@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     document.getElementById('scrapeBtn').addEventListener('click', function () {
         // Send request to server to scrape parking data
-        fetch('http://0.0.0.0:3000/scrape-parking-data')
+        fetch('http://18.224.86.173:3000/scrape-parking-data')
             .then(response => response.text())
             .then(data => alert(data))
             .catch(error => alert('Error: ' + error));
