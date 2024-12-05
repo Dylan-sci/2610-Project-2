@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const scraper = require('./scraper');
 const router = express.Router();
 const parkingLotRoutes = require("./routes/parkingLots");
+// Use CORS for AWS
+const cors = require('cors');
 
 // MongoDB Configuration
 // Setup dotenv file. Source: https://www.youtube.com/watch?v=-NfsmF-6BHo
@@ -18,10 +20,9 @@ const COLLECTION_NAME = 'parkingData';
 // Initialize the app
 const app = express();
 
-// Middleware to serve static files
+// Middleware
 app.use(express.static('public'));
-
-// Body parser middleware for JSON requests
+app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
