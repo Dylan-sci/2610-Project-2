@@ -36,7 +36,7 @@ mongoose.connect(URI)
 // Route for scraping parking data
 app.get('/scrape-parking-data', async (req, res) => {
     try {
-        await scraper.scrapeAndStoreParkingData(); // Call the scraping function
+        await scraper.scrapeAndStoreParkingData();
         res.send('Parking data scraped and saved successfully!');
     } catch (error) {
         res.status(500).send('Error scraping parking data.');
