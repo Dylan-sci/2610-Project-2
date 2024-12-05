@@ -1,0 +1,40 @@
+a.navbar-brand, a.navbar-brand:hover, a.btn.btn-link {
+    color: #FFF7D1;
+}
+
+.btn-primary {
+    background-color: #563A9C;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: #8B5DFF !important;
+}
+
+.btn-secondary {
+    background-color: #8B5DFF;
+}
+
+.btn-secondary:hover, .btn-secondary:active {
+    background-color: #563A9C !important;
+}
+
+.navbar {
+    background-color: #8B5DFF;
+}
+
+.table th {
+    background-color: #563A9C;
+    color: #FFF7D1;
+}
+
+.table td {
+    vertical-align: middle;
+    background-color: #8B5DFF;
+    color: #FFF7D1;
+}
+
+.delete-btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
