@@ -27,7 +27,7 @@ async function scrapeAndStoreParkingData() {
 
         const parkingData = [];
 
-        dayButtons.each(buttonElement => {
+        dayButtons.each((index, buttonElement) => {
             const day = $(buttonElement).text().trim();
             const tableSelector = $(buttonElement).attr('data-target');
             const table = $(tableSelector);
@@ -35,7 +35,7 @@ async function scrapeAndStoreParkingData() {
             if (table.length > 0) {
                 const rows = table.find('tbody tr');
 
-                rows.each(rowElement => {
+                rows.each((rowIndex, rowElement) => {
                     const cells = $(rowElement).find('td');
 
                     if (cells.length > 0) {
